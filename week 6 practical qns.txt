@@ -1,0 +1,23 @@
+1) What are the advantages of using repetition when writing program code?
+Overall, repetition enhances code efficiency, maintainability,
+ and readability, making it a powerful tool for programmers to manage
+ iterative tasks effectively.
+
+2)Write some code which will display a launch counter to the Output window 
+using the Console.WriteLine method, counting down from 10 to 1 and 
+ending in "Blastoff!"
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 10; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+        
+        Console.WriteLine("Blastoff!");
+    }
+}

@@ -1,0 +1,64 @@
+1)
+
+if ((A == B) || (A > C && B == D))
+{
+    // Code block if the condition is true
+}
+else
+{
+    // Code block if the condition is false
+}
+-----------------------------
+2)
+
+Let's substitute the values for A, B, C, and D in the given expression:
+
+Expression: (A == B) || (A > C && B == D)
+
+Given values: A=3, B=3, C=2, D=1
+
+Now, we can evaluate the expression:
+
+(A == B) => (3 == 3) => true
+
+(A > C && B == D) => (3 > 2 && 3 == 1) => (true && false) => false
+
+Now, combining both parts using the logical OR operator:
+
+(true) || (false) => true
+
+So, the given expression is true with the provided values.
+
+The issue here in terms of precedence is that the logical AND operator (&&) has higher precedence than the logical OR operator (||). Therefore, the part (A > C && B == D) is evaluated first, and then the result is combined with (A == B) using the logical OR operator. Since && has higher precedence, the evaluation order is not as straightforward as the English expression suggests. To ensure the intended evaluation order, you can use parentheses to explicitly group the conditions as needed. For example, you can rewrite the expression as:
+
+(A == B) || ((A > C) && (B == D))
+
+With this modification, the expression will still evaluate to true with the given values.
+
+----------------------------------------------------------------------------------
+3)
+
+Writing comments in program code provides several benefits:
+
+1. **Code Understanding:** Comments help developers and readers of the code understand the purpose, logic, and functionality of the code. They act as a guide, making it easier for someone else (or even the original author) to understand the code's intentions.
+
+2. **Code Maintenance:** Comments make code maintenance easier. When revisiting code after some time, comments can serve as reminders of the code's design and functionality, reducing the time needed to make changes or fix issues.
+
+3. **Collaboration:** Comments facilitate collaboration among team members. They enable developers to communicate ideas, explanations, and thoughts about the code, leading to better team understanding and productivity.
+
+4. **Debugging and Troubleshooting:** When debugging code or troubleshooting issues, comments can offer insights into the code's behavior and the intention behind specific decisions, speeding up the process of finding and fixing bugs.
+
+5. **Documentation Generation:** Well-commented code can serve as the foundation for generating code documentation. Many tools and frameworks can extract comments and generate documentation, such as API references, user manuals, and developer guides.
+
+6. **Educational Purposes:** Comments can be educational for junior developers or newcomers to the codebase. They help in learning programming concepts, best practices, and code patterns.
+
+7. **Code Review and Quality Assurance:** During code reviews, comments provide context and rationale behind the code, making it easier for reviewers to assess code quality and suggest improvements.
+
+8. **Regulatory and Compliance Requirements:** In some industries or projects, documenting code with comments may be a requirement for regulatory compliance or quality assurance purposes.
+
+9. **Legacy Code Understanding:** For older or legacy codebases, comments become even more critical. They provide essential information for developers who didn't write the original code but need to maintain or extend it.
+
+
+
+
+

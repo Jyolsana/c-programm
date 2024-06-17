@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace triangle_and_square
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Declare variables for Triangle
+            Point corner1 = new Point(50, 50);
+            Point corner2 = new Point(100, 100);
+            Point corner3 = new Point(150, 50);
+            //Get Graphics from object form
+            Graphics g = pictureBox1.CreateGraphics();
+            //Draw lines from corner to corner
+            g.DrawLine(Pens.Black, corner1, corner2);
+            g.DrawLine(Pens.Black, corner2, corner3);
+            g.DrawLine(Pens.Black, corner3, corner1);
+
+        }
+
+        private void btn_square_Click(object sender, EventArgs e)
+        {
+            //Declare variable
+            int x = 50;
+            int y = 80;
+            int size = 60;
+            // Get graphics object
+            Graphics g = pictureBox1.CreateGraphics();
+            // Create pen
+            Pen pen = new Pen(Color.Black, 2);
+            //Draw rectangle to draw square
+            g.DrawRectangle(pen, x, y, size,size);
+            // dispose graphics to leave resources
+            pen.Dispose();
+            g.Dispose();
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Refresh();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
+}
